@@ -1,0 +1,46 @@
+﻿@model ASPNETCoreIdentity.Models.ViewModel.AssignViewModels
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <a asp-action="Create" class="btn btn-primary">Assign Role</a>
+    <br />   <br />
+    <form asp-action="Index">
+        <div class="form-group">
+            <label class="col-md-2 control-label">Select User</label>
+            <div class="col-md-10">
+                <select name="UserId" asp-items="ViewBag.Users" class="form-control" onchange="this.form.submit()"></select>
+            </div>
+        </div>
+    </form>
+</div>
+<br /><br />
+    <div class="row">
+        <form asp-action="Create">
+            <div class="col-md-10">
+
+                @for (int i = 0; i < Model.Roles.Count(); i++)
+                {
+                    <div class="col-md-3">
+                        <input type="checkbox" asp-for="@Model.Roles[i].Selected" />
+                        <label asp-for="@Model.Roles[i].Selected">@Model.Roles[i].Text</label>
+                        <input type="hidden" asp-for="@Model.Roles[i].Value" />
+                        <input type="hidden" asp-for="@Model.Roles[i].Text" />
+                    </div>
+                }
+               
+            </div>
+            
+            <div class="col-md-10">
+                <input name="UserId" value="@Model.UserId" type="hidden" />
+                <br /><br />
+                <div>
+                    <input type="submit" value="Assgin Role" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>           
+   

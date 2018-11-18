@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 2790954,
+    "Username": "Safaet",
+    "Name": "Noor All Safaet",
+    "Email": "safaet@dropndot.com",
+    "AvatarUrl": "https://secure.gravatar.com/avatar/c89f18450740957bee4c540277c6ec26?s=80&d=identicon",
+    "PrivateToken": "a4885e7c38d15853975bc3e7ab2aae9a7325b2d0e7908da19d5e6a0c4f0e0a54",
+    "Host": "https://gitlab.com",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}

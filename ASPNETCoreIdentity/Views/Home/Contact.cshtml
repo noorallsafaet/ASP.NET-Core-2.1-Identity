@@ -1,0 +1,53 @@
+﻿@model ASPNETCoreIdentity.Models.ViewModel.ContactViewModels
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<hr />
+
+<form asp-action="Contact">
+    <div class="form-horizontal">
+        <h4>@ViewData["Title"]</h4>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Firstname" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Firstname" type="text" class="form-control" />
+                <span asp-validation-for="Firstname" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Lastname" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Lastname" type="text" class="form-control" />
+                <span asp-validation-for="Lastname" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" type="text" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Comapny" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Comapny" type="text" class="form-control" />
+                <span asp-validation-for="Comapny" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Message" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <textarea asp-for="Message" type="text" class="form-control" rows="3" ></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+        </div>        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Send Email" class="btn btn-primary btn-block" />
+            </div>
+        </div>
+    </div>
+</form>
